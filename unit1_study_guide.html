@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"><title>Unit 1 Psychology Study Guide</title>
+<style>
+:root{--bg:#07142b;--p:#0e2347;--p2:#16316a;--ln:#27478a;--tx:#e6eeff;--mu:#8ea6d4;--ac:#5aa9ff;--ok:#3ecf8e;--no:#ff6b81}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Georgia,serif}
+h1{font:700 22px system-ui,sans-serif;margin:0}button,input{font:inherit}
+header{padding:14px 18px;border-bottom:1px solid var(--ln);display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.bar{display:flex;flex-wrap:wrap;gap:6px;padding:10px 18px;font-family:system-ui,sans-serif}
+button{background:var(--p);color:var(--tx);border:1px solid var(--ln);border-radius:8px;padding:7px 13px;cursor:pointer}
+button:hover{background:var(--p2)}button.on{background:var(--ac);color:#04122a;border-color:var(--ac);font-weight:600}
+button:focus-visible,input:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+main{max-width:820px;margin:0 auto;padding:12px 18px 60px}
+.card{background:var(--p);border:1px solid var(--ln);border-radius:12px;padding:22px;margin:12px 0}
+.fc{min-height:230px;display:flex;flex-direction:column;justify-content:center;cursor:pointer;text-align:center;font-size:20px}
+.fc .t{font-size:26px;font-weight:700}.det{text-align:left;font-size:15px;margin-top:14px;border-top:1px solid var(--ln);padding-top:10px}
+.det b{color:var(--ac)}.mu{color:var(--mu);font:14px system-ui,sans-serif}
+.opt{display:block;width:100%;text-align:left;margin:7px 0}.ok{background:#12503a!important;border-color:var(--ok)}.bad{background:#5a1c2c!important;border-color:var(--no)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.m{text-align:left;font-size:14px}.sel{border-color:var(--ac);box-shadow:0 0 0 2px var(--ac)}
+input[type=text]{width:100%;padding:10px;border-radius:8px;border:1px solid var(--ln);background:var(--bg);color:var(--tx);margin:8px 0}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.tag{font:12px system-ui;color:var(--ac)}
+
+:root{--bg:#04204f;--p:#0a3a85;--p2:#1553b8;--ln:#3b78e0;--ac:#7cc4ff;--mu:#a9c6f5}
+body{display:grid;grid-template-columns:220px 1fr;grid-template-areas:"h h" "n r";min-height:100vh}
+header{grid-area:h;background:var(--p)}nav{grid-area:n;padding:14px;border-right:1px solid var(--ln);display:flex;flex-direction:column;gap:5px;font-family:system-ui,sans-serif}
+nav h3{margin:12px 0 2px;font:600 13px system-ui;color:var(--mu)}nav button{text-align:left;width:100%}#rt{grid-area:r;min-width:0}
+#flt{margin:12px 18px 0;padding:10px 14px}#flt summary{cursor:pointer;font:600 15px system-ui}#flt .bar{padding:8px 0 0}
+main{margin:0 auto}.gh{font:700 18px system-ui;color:var(--ac);border-bottom:1px solid var(--ln);padding-bottom:4px;margin:26px 0 8px}
+dt{font-weight:700;margin-top:10px}dd{margin:2px 0 0 18px;color:var(--mu)}
+@media(max-width:700px){body{grid-template-columns:1fr;grid-template-areas:"h" "n" "r"}nav{flex-direction:row;flex-wrap:wrap;border:0}nav h3{width:100%;margin:4px 0 0}nav button{width:auto}}
+
+:root{--bg:#050f26;--p:#0b1f4a;--p2:#16408f;--ln:#1f4a9c;--ac:#4da3ff;--mu:#9fbdf0}
+body{display:block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:radial-gradient(circle at 15% 10%,rgba(77,163,255,.14),transparent 40%),radial-gradient(circle at 85% 90%,rgba(40,100,230,.16),transparent 40%) fixed,var(--bg)}
+header{position:sticky;top:0;z-index:9;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 18px;background:rgba(11,31,74,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.hl{display:flex;gap:12px;align-items:center}.logo{width:42px;height:42px;border-radius:12px;background:rgba(77,163,255,.18);border:1px solid var(--ac);display:grid;place-items:center;color:var(--ac);font-size:20px;box-shadow:0 0 16px rgba(77,163,255,.4)}
+h1{font:800 20px 'Plus Jakarta Sans'}.pro{font-size:11px;padding:2px 8px;border-radius:99px;background:rgba(77,163,255,.2);border:1px solid var(--ac);color:var(--ac);vertical-align:middle}
+.stats{display:flex;gap:16px;font:500 13px 'JetBrains Mono',monospace;background:rgba(5,15,38,.7);padding:8px 14px;border-radius:12px;border:1px solid var(--ln)}
+nav{display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;padding:5px;background:rgba(5,15,38,.6);border:1px solid var(--ln);border-radius:12px;width:auto}
+nav .tab{width:auto;border:0;background:none;color:var(--mu);font:600 13px 'Plus Jakarta Sans';padding:8px 12px;border-radius:9px}
+nav .tab:hover{color:#fff}nav .tab.on{background:var(--ac);color:#04122a;box-shadow:0 0 14px rgba(77,163,255,.5)}
+#rt{max-width:1100px;margin:0 auto}main{max-width:960px}
+.card{background:linear-gradient(160deg,rgba(22,64,143,.35),rgba(11,31,74,.9));border:1px solid var(--ln);border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.bar button,.row button,.blist button{border-radius:99px;font:600 13px 'Plus Jakarta Sans'}
+.bar button.on,.row button.on{background:var(--ac);color:#04122a}
+.gg{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.gt{background:var(--p);border:1px solid var(--ln);border-left:4px solid var(--ac);border-radius:10px;padding:10px 14px}.gt b{display:block;color:#fff}.gt span{color:var(--mu);font-size:14px}
+.gh{font:800 17px 'Plus Jakarta Sans';color:var(--ac);margin:26px 0 10px;border:0}
+.fc{min-height:260px;background:linear-gradient(145deg,#1553b8,#0b1f4a);box-shadow:0 0 30px rgba(77,163,255,.25);animation:pop .25s}
+@keyframes pop{from{transform:scale(.97);opacity:.6}}
+.opt{border-radius:12px;padding:12px 16px;transition:transform .1s}.opt:hover:not(:disabled){transform:translateX(4px);border-color:var(--ac)}
+.pg{height:6px;background:#0a2a66;border-radius:9px;margin-top:6px;overflow:hidden}.pg i{display:block;height:100%;background:linear-gradient(90deg,#4da3ff,#7cffd8)}
+.tag{padding:2px 9px;border-radius:99px;background:rgba(77,163,255,.15);border:1px solid var(--ln)}
+.sv{width:100%;height:auto;display:block}.n{cursor:pointer}.n:hover{filter:brightness(1.35)}
+.bgrid{display:grid;grid-template-columns:3fr 2fr;gap:14px}@media(max-width:800px){.bgrid{grid-template-columns:1fr}}
+.r{cursor:pointer;opacity:.78;transition:opacity .15s}.r:hover{opacity:1}.r.sel{opacity:1;filter:drop-shadow(0 0 7px #fff)}.deep .lobe{opacity:.12}
+.lb{font:700 10px system-ui;fill:#fff;pointer-events:none;paint-order:stroke;stroke:#04204f;stroke-width:3px;text-anchor:middle}
+.blist{display:flex;flex-wrap:wrap;gap:6px}.pill{background:rgba(5,15,38,.6);border:1px solid var(--ln);border-radius:10px;padding:10px 14px;margin-top:8px;font-size:14px}
+.mk{fill:#ffb454;cursor:pointer;stroke:#fff}.mk:hover{r:11}h3.ch{margin:0 0 8px;font:800 16px 'Plus Jakarta Sans'}
+input[type=range]{accent-color:#4da3ff}
+.det div{margin:7px 0;line-height:1.45}.det b{display:inline-block;min-width:0}</style></head><body>
+<header><div class="hl"><div class="logo"><i class="fa-solid fa-brain"></i></div><div><h1>NeuroMaster <span class="pro">Unit 1</span></h1><div class="mu">AP Psychology Study Suite</div></div></div><div class="stats" id="cnt"></div><nav id="modes"></nav></header>
+<div id="rt"><details open class="card" id="flt"><summary><i class="fa-solid fa-sliders"></i> Filters: scope and categories</summary><div class="bar" id="scope"></div><div class="bar" id="cats"></div></details><main id="main"></main></div>
+<script>
+const C={G:"Genetics",N:"Nervous system",U:"Neuron",C:"Neurotransmitters & hormones",D:"Drugs",M:"Brain methods",S:"Brain structures",X:"Cortex"};
+const D=[
+["Psychology","G","Scientific study of behavior and mental processes."],
+["Nature-nurture issue","G","Debate over how much genes (nature) vs. experience (nurture) shape us; both interact."],
+["Natural selection","G","Inherited traits that aid survival and reproduction become more common over generations."],
+["Evolutionary psychology","G","Studies how natural selection shaped behavior and mind to solve ancestral problems."],
+["Mutation","G","Random error in gene replication; source of variation for natural selection."],
+["Environment","G","Every nongenetic influence, from prenatal nutrition to culture."],
+["Heredity","G","Genetic transfer of characteristics from parents to offspring."],
+["Genes","G","DNA segments that code for proteins; biochemical units of heredity."],
+["Identical (monozygotic) twins","G","Twins from one fertilized egg that splits; share 100% of genes."],
+["Fraternal (dizygotic) twins","G","Twins from two separate eggs; share about 50% of genes."],
+["Interaction","G","Effect of one factor (e.g. genes) depends on another (e.g. environment)."],
+["Nervous system","N","Body's electrochemical communication network of all neurons."],
+["Central nervous system (CNS)","N","Brain and spinal cord; makes decisions and processes information."],
+["Peripheral nervous system (PNS)","N","Sensory and motor neurons connecting the CNS to the body."],
+["Nerves","N","Bundles of axons forming cables between CNS and muscles, glands, sense organs."],
+["Sensory (afferent) neurons","N","Carry incoming information from receptors to brain and spinal cord."],
+["Motor (efferent) neurons","N","Carry outgoing commands from CNS to muscles and glands."],
+["Interneurons","N","Neurons within CNS linking sensory input to motor output; most numerous type."],
+["Somatic nervous system","N","PNS division controlling voluntary skeletal muscle movement."],
+["Autonomic nervous system","N","PNS division controlling glands and internal organs automatically."],
+["Sympathetic nervous system","N","Arouses body, mobilizes energy under stress (fight or flight)."],
+["Parasympathetic nervous system","N","Calms body, conserves energy (rest and digest)."],
+["Reflex","N","Simple automatic inborn response to a stimulus, handled by the spinal cord."],
+["Neuron","U","Nerve cell; basic building block of the nervous system."],
+["Glial cells","U","Support cells that nourish, insulate (myelin), and clean up around neurons."],
+["Action potential","U","Brief electrical charge traveling down an axon as positive ions rush in."],
+["Threshold","U","Level of stimulation needed to trigger a neural impulse."],
+["Refractory period","U","Brief rest after firing during which a neuron cannot fire again."],
+["All-or-none response","U","A neuron fires completely or not at all; strength is constant, rate can vary."],
+["Neurotransmitters","C","Chemical messengers crossing the synapse to excite or inhibit the next neuron.","Made in neuron cell bodies and stored in vesicles at the axon terminals.|Released when an action potential reaches the terminal, they cross the synapse and bind receptors like a key in a lock, exciting or inhibiting the next neuron. They are then cleared by reuptake or enzymes.|Carry messages between neurons and to muscles and glands, shaping movement, mood, memory, sleep, and arousal.|Too much or too little of a specific transmitter is tied to disorders such as Parkinson's, depression, and schizophrenia.|Drugs act as agonists (mimic), antagonists (block), or reuptake blockers."],
+["Reuptake","C","Sending neuron reabsorbs leftover neurotransmitter; blocked by many antidepressants."],
+["Endorphins","C","Natural opiate-like neurotransmitters for pain control and pleasure.","Released by the pituitary gland and hypothalamus during pain, stress, vigorous exercise, and laughter.|Bind opioid receptors, which blocks pain signals and triggers dopamine release.|Natural pain relief, pleasure, well-being, and the 'runner's high'.|Low levels mean heightened pain sensitivity. Opioid drug use shuts down natural production, so stopping causes painful withdrawal.|The name means 'morphine within'. Heroin, morphine, and oxycodone are agonists of these receptors."],
+["Agonist","C","Molecule that mimics or enhances a neurotransmitter's effect (antagonist blocks it).","Not made by the body; a drug or toxin molecule.|Shaped like a neurotransmitter, so it fits the receptor and activates it, imitating or enhancing the natural effect.|Boosts or copies the message of a neurotransmitter (morphine at endorphin receptors, nicotine at ACh receptors).|Overuse changes receptors and causes tolerance, dependence, and withdrawal.|Antagonists do the opposite by blocking receptors (curare, antipsychotics)."],
+["Endocrine system","C","Slower chemical system of glands secreting hormones into the bloodstream.","Glands: pituitary, thyroid, parathyroids, adrenals, pancreas, ovaries or testes, and pineal.|Glands release hormones into the bloodstream, which carries them to distant target cells.|Slow, widespread control of growth, metabolism, stress, reproduction, hunger, and sleep.|Gland overactivity or underactivity causes disorders such as diabetes and thyroid disease.|The pituitary is the 'master gland', and the hypothalamus controls it, linking nervous and endocrine systems."],
+["Hormones","C","Chemical messengers carried by blood that affect other tissues.","Made by endocrine glands (pituitary, adrenals, pancreas, thyroid, ovaries, testes) and the hypothalamus.|Travel through the blood and bind receptors on target cells. Slower than neurotransmitters but effects last longer.|Regulate growth, metabolism, stress response, hunger, sleep, and sexual development.|Examples: diabetes (insulin), thyroid disorders, effects of chronic stress (cortisol, adrenaline).|Some chemicals act as both hormone and neurotransmitter (norepinephrine)."],
+["Dopamine","C","Neurotransmitter for reward, movement, and attention.","Made in the midbrain (substantia nigra and ventral tegmental area); acts in reward and movement circuits.|Binds dopamine receptors and is cleared by reuptake; effect depends on the receptor type.|Reward, motivation, pleasure, voluntary movement, attention, and learning from rewards.|Too little: Parkinson's disease (tremors, slow movement). Too much: schizophrenia symptoms such as hallucinations and delusions.|Cocaine and amphetamines raise it; antipsychotics block its receptors; L-dopa treats Parkinson's. Addictive drugs flood the reward pathway."],
+["Serotonin","C","Neurotransmitter affecting mood, hunger, sleep, and arousal.","Made in the brainstem raphe nuclei; most of the body's supply is actually in the gut.|Binds many receptor types and is cleared by reuptake, which SSRIs block.|Mood regulation, sleep, appetite, arousal, impulse control, and body temperature.|Low: depression, anxiety, OCD, aggression. Excess: serotonin syndrome (fever, agitation, tremor).|SSRIs (Prozac, Zoloft) raise it; LSD and psilocybin act on its receptors; MDMA releases it."],
+["Acetylcholine (ACh)","C","Neurotransmitter for muscle action, learning, and memory.","Released by motor neurons at the neuromuscular junction and by neurons in the basal forebrain.|Binds receptors on muscle fibers to trigger contraction; in the brain it supports attention and memory circuits. An enzyme breaks it down.|All voluntary muscle contraction, learning, memory, attention, REM sleep, and parasympathetic organ control.|Too little: Alzheimer's (memory loss) and muscle weakness. Too much: spasms.|Curare and botulism toxin block it (paralysis), black widow venom floods it, and nicotine mimics it."],
+["GABA","C","Major inhibitory neurotransmitter.","Made by interneurons throughout the brain and spinal cord; the main inhibitory neurotransmitter.|Opens chloride channels so the next neuron is less likely to fire.|Calms neural activity, reduces anxiety, promotes sleep, and balances excitation from glutamate.|Too little: anxiety, seizures, tremors. Too much: sedation and slowed breathing.|Alcohol, barbiturates, and benzodiazepines boost GABA, causing drowsiness and slurred speech."],
+["Glutamate","C","Major excitatory neurotransmitter involved in learning and memory.","The most common excitatory transmitter; used by most cortex and hippocampus neurons.|Binds receptors (including NMDA) that let ions in, making firing more likely.|Learning and memory through long-term potentiation, sensory processing, and general brain activation.|Too much: overexcitation, seizures, migraines, and neuron death after stroke.|Counterpart to GABA. MSG can overstimulate; ketamine and PCP block NMDA receptors."],
+["Norepinephrine","C","Neurotransmitter and hormone that increases arousal and alertness.","Made in the locus coeruleus of the brainstem and at sympathetic nerve endings; also released by adrenal glands.|Binds adrenergic receptors during sympathetic activation and is cleared by reuptake.|Arousal, alertness, attention, raising heart rate and blood pressure, and memory of emotional events.|Too little: depression, low energy, poor focus. Too much: anxiety, panic, high blood pressure.|Amphetamines and cocaine raise it; SNRIs block its reuptake. A close relative of epinephrine."],
+["Epinephrine (adrenaline)","C","Hormone from adrenal glands that triggers fight or flight.","Made by the adrenal medulla, on top of the kidneys, when the sympathetic nervous system fires.|Released into the blood; binds receptors on the heart, lungs, liver, and muscles.|Fight or flight: raises heart rate, blood pressure, and blood sugar, widens airways, and slows digestion.|Chronic excess: hypertension, anxiety, and exhaustion.|EpiPens deliver it to stop severe allergic reactions. Norepinephrine is its close relative."],
+["Insulin","C","Pancreatic hormone that lowers blood glucose.","Made by beta cells of the pancreas.|Tells cells to take up glucose from the blood; the liver stores excess as glycogen.|Lowers blood sugar, stores energy, and influences hunger.|Type 1: no insulin made. Type 2: cells resist it. Too much: low blood sugar, shakiness, hunger.|Works opposite glucagon, which raises blood sugar."],
+["Leptin","C","Hormone from fat cells that signals fullness.","Made by fat cells.|Travels to the hypothalamus to signal that energy stores are sufficient.|Suppresses appetite and increases energy use.|Leptin resistance leads to constant hunger and weight gain; low leptin from dieting increases hunger.|Leptin turns appetite down; ghrelin turns it up."],
+["Ghrelin","C","Stomach hormone that signals hunger.","Made by the stomach lining.|Travels to the hypothalamus, stimulating hunger centers.|Triggers hunger and food seeking, rising before meals.|Rises with dieting and poor sleep, making weight loss harder.|Mnemonic: ghrelin makes your stomach growl."],
+["Oxytocin","C","Hormone for bonding, birth, and nursing.","Made in the hypothalamus and released by the pituitary gland.|Acts on the uterus, breasts, and brain; released with touch, birth, and nursing.|Bonding, trust, labor contractions, milk release, and attachment.|Can increase in-group bias and envy; low levels are linked to social difficulties in some research.|Called the 'cuddle hormone'; a synthetic form is used to induce labor."],
+["Melatonin","C","Pineal hormone that regulates sleep-wake cycle.","Made by the pineal gland in the brain.|Released in darkness, controlled by the brain's biological clock; light suppresses it.|Regulates the sleep-wake cycle and promotes drowsiness.|Light at night, jet lag, and shift work disrupt it and cause insomnia.|Supplements are used for jet lag. Teens release it later, explaining late sleep schedules."],
+["Psychoactive drugs","D","Chemicals that change perception and mood by altering neural activity.","Alter neurotransmitter release, receptors, or reuptake.|Change mood, perception, arousal.|Tolerance, dependence, withdrawal."],
+["Depressants","D","Drugs that slow neural activity and body functions (alcohol, barbiturates, tranquilizers).","Boost GABA and slow neural firing.|Relaxation, lowered inhibition, drowsiness.|Slurred speech, impaired memory and judgment, blackouts, respiratory failure; dangerous mixed together. Alcohol: aggression, liver damage."],
+["Tolerance","D","Diminishing effect of the same dose; larger doses needed."],
+["Addiction","D","Compulsive drug craving and use despite harmful consequences."],
+["Withdrawal","D","Discomfort and distress after stopping an addictive drug."],
+["Opioids","D","Opium derivatives (morphine, heroin, oxycodone) that depress neural activity and relieve pain.","Mimic endorphins at opioid receptors; brain reduces its own endorphins.|Pain relief, euphoria, calm.|Constipation, drowsiness, slowed breathing and fatal overdose, severe withdrawal, high addiction risk."],
+["Stimulants","D","Drugs that excite neural activity and speed body functions (caffeine, nicotine, cocaine, amphetamines, meth).","Increase dopamine/norepinephrine (cocaine blocks reuptake; amphetamines boost release).|Energy, alertness, euphoria, reduced appetite.|Anxiety, insomnia, high blood pressure, heart problems; crash, depression, paranoia, addiction. Nicotine: highly addictive, cancer risk."],
+["Hallucinogens","D","Psychedelics (LSD, psilocybin, marijuana in some systems) that distort perception without sensory input.","LSD and psilocybin act on serotonin receptors; THC binds cannabinoid receptors.|Altered perception, vivid imagery, mood shifts, relaxation (THC).|Panic, paranoia, flashbacks; THC: impaired memory and coordination, possible respiratory harm."],
+["Biological psychology","M","Branch studying links between biology and behavior."],
+["Biopsychosocial approach","M","Integrates biological, psychological, and social-cultural influences."],
+["Lesion","M","Tissue destruction, natural or deliberate, to study a brain region."],
+["EEG (electroencephalogram)","M","Records brain wave electrical activity via scalp electrodes."],
+["MEG (magnetoencephalography)","M","Measures magnetic fields from brain activity with fast timing."],
+["CT (computed tomography) scan","M","X-rays from many angles combined into a picture of brain structure."],
+["PET (positron emission tomography)","M","Shows brain activity by tracking radioactive glucose use."],
+["MRI (magnetic resonance imaging)","M","Magnetic fields and radio waves give detailed images of brain structure."],
+["fMRI (functional MRI)","M","Shows blood flow, so both brain structure and function."],
+["Brainstem","S","Oldest, innermost brain part; automatic survival functions."],
+["Medulla","S","Base of brainstem controlling heartbeat and breathing."],
+["Thalamus","S","Sensory switchboard routing messages to cortex (except smell)."],
+["Reticular formation","S","Brainstem network controlling arousal and alertness (RAS)."],
+["Cerebellum","S","Coordinates movement and balance; helps nonverbal learning and memory."],
+["Limbic system","S","Structures tied to emotion and drives: amygdala, hypothalamus, hippocampus."],
+["Amygdala","S","Almond-shaped clusters linked to fear and aggression."],
+["Hypothalamus","S","Directs eating, drinking, temperature; controls pituitary; linked to emotion and reward."],
+["Hippocampus","S","Processes and forms new explicit (conscious) memories."],
+["Cerebral cortex","X","Fabric of neural cells covering the hemispheres; ultimate control center."],
+["Frontal lobes","X","Behind forehead: speaking, movement, planning, judgment."],
+["Parietal lobes","X","Top rear of head: touch and body position input."],
+["Occipital lobes","X","Back of head: visual areas."],
+["Temporal lobes","X","Above the ears: auditory areas."],
+["Motor cortex","X","Rear of frontal lobes; controls voluntary movement."],
+["Somatosensory cortex","X","Front of parietal lobes; registers touch and movement sensations."],
+["Association areas","X","Cortex areas that integrate information for learning, thinking, speaking."],
+["Corpus callosum","X","Band of fibers connecting the two hemispheres."],
+["Split brain","X","Result of cutting the corpus callosum, separating hemispheres."]
+];
+const $=id=>document.getElementById(id),sh=a=>{a=[...a];for(let i=a.length;i>1;){let j=Math.random()*i--|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+let mode="flash",scope="all",cats=new Set(Object.keys(C)),miss=new Set(),miss_only=false;
+const MODES={gloss:"Glossary",browse:"Detail Notes",brain:"Brain Map",neuron:"Neuron Lab",flash:"Flashcards",match:"Matching",quiz:"Quiz",type:"Type-In",rev:"Definitions",app:"Applications"};
+const IC={gloss:"book-open",browse:"list",brain:"brain",neuron:"bolt",flash:"clone",match:"puzzle-piece",quiz:"list-check",type:"keyboard",rev:"arrows-left-right",app:"flask"};
+function pool(n){let p=sh(D.filter(d=>cats.has(d[1])&&(!miss_only||miss.has(d[0]))));return scope=="rand"?p.slice(0,n):p}
+function det(d){if(!d[3])return"";const a=d[3].split("|"),L=a.length>3?["Where it comes from","How it works","Main functions","When imbalanced","Drugs and exam tips"]:["How it works","Main effects","Side effects"];return'<div class="det">'+a.map((x,i)=>`<div><b>${L[i]}:</b> ${x}</div>`).join("")+"</div>"}
+function bar(){
+$("modes").innerHTML=Object.keys(MODES).map(k=>`<button class="tab ${k==mode?"on":""}" onclick="mode='${k}';go()"><i class="fa-solid fa-${IC[k]}"></i> ${MODES[k]}</button>`).join("");
+$("scope").innerHTML=[["rand","Random 10"],["all","Everything, random order"]].map(([k,v])=>`<button class="${k==scope?"on":""}" onclick="scope='${k}';go()">${v}</button>`).join("")+`<button class="${miss_only?"on":""}" onclick="miss_only=!miss_only;go()">Missed only (${miss.size})</button>`;
+$("cats").innerHTML=`<button onclick="cats=new Set(Object.keys(C));go()">All</button>`+Object.entries(C).map(([k,v])=>`<button class="${cats.has(k)?"on":""}" onclick="tog('${k}')">${v}</button>`).join("");
+$("cnt").innerHTML=`<span><i class="fa-solid fa-circle-check" style="color:#3ecf8e"></i> Terms: ${D.filter(d=>cats.has(d[1])).length}</span><span><i class="fa-solid fa-triangle-exclamation" style="color:#ffb454"></i> Missed: ${miss.size}</span>`}
+function tog(k){cats.has(k)?cats.delete(k):cats.add(k);if(!cats.size)cats.add(k);go()}
+let Q=[],i=0,sc=0,flip=false;
+function go(){bar();Q=pool(mode=="match"?6:10);i=0;sc=0;flip=false;$("flt").style.display=["brain","neuron"].includes(mode)?"none":"";if(!Q.length&&!["gloss","browse","app","brain","neuron"].includes(mode)){$("main").innerHTML='<div class="card">No terms match. Clear the missed filter or pick more categories.</div>';return}({brain,neuron,gloss,browse,flash,quiz,match,type,rev,app})[mode]()}
+function done(){$("main").innerHTML=`<div class="card"><h2>Round complete</h2><p>Score: ${sc} / ${Q.length}</p><button onclick="go()">Go again</button></div>`}
+function browse(){$("main").innerHTML='<input type="text" id="q" placeholder="Search terms or definitions" oninput="bl()"><div id="bl"></div>';bl()}
+function bl(){const s=($("q").value||"").toLowerCase();$("bl").innerHTML=D.filter(d=>cats.has(d[1])&&(d[0]+d[2]).toLowerCase().includes(s)).map(d=>`<div class="card"><b>${d[0]}</b> <span class="tag">${C[d[1]]}</span><div>${d[2]}</div>${det(d)}</div>`).join("")}
+let rv=false;
+function flash(){if(i>=Q.length)return done();const d=Q[i];
+$("main").innerHTML=`<div class="mu">Card ${i+1} of ${Q.length}. Click card to flip.</div><div class="card fc" onclick="flip=!flip;flash()" tabindex="0">${flip!=rv?`<div>${d[2]}</div>${det(d)}`:`<div class="t">${d[0]}</div><div class="tag">${C[d[1]]}</div>`}</div>
+<div class="row"><button onclick="i=Math.max(0,i-1);flip=false;flash()">Back</button><button onclick="miss.add('${d[0].replace(/'/g,"\\'")}');bar();i++;flip=false;flash()">Still learning</button><button onclick="miss.delete('${d[0].replace(/'/g,"\\'")}');bar();sc++;i++;flip=false;flash()">Got it</button><button onclick="rv=!rv;flip=false;flash()">Flip side: ${rv?"definition first":"term first"}</button></div>`}
+function quiz(){if(i>=Q.length)return done();const d=Q[i];const o=sh([d,...sh(D.filter(x=>x!=d&&(x[1]==d[1]||Math.random()<.3))).slice(0,3)]);
+$("main").innerHTML=`<div class="mu">Question ${i+1} of ${Q.length}</div><div class="card">${d[2]}</div><div id="o">${o.map(x=>`<button class="opt" onclick="pick(this,${x==d})">${x[0]}</button>`).join("")}</div><div id="f"></div>`}
+function pick(b,ok){document.querySelectorAll(".opt").forEach(x=>x.disabled=true);const d=Q[i];b.classList.add(ok?"ok":"bad");if(ok)sc++;else{miss.add(d[0]);document.querySelectorAll(".opt").forEach(x=>{if(x.textContent==d[0])x.classList.add("ok")})}
+$("f").innerHTML=`<div class="card">${det(d)||d[2]}</div><button onclick="i++;quiz()">Next</button>`}
+function rev(){if(i>=Q.length)return done();const d=Q[i];const o=sh([d,...sh(D.filter(x=>x!=d)).slice(0,3)]);
+$("main").innerHTML=`<div class="mu">Question ${i+1} of ${Q.length}</div><div class="card"><b>${d[0]}</b>: pick its definition</div><div>${o.map(x=>`<button class="opt" onclick="pickr(this,${x==d})">${x[2]}</button>`).join("")}</div><div id="f"></div>`}
+function pickr(b,ok){document.querySelectorAll(".opt").forEach(x=>x.disabled=true);const d=Q[i];b.classList.add(ok?"ok":"bad");if(ok)sc++;else{miss.add(d[0]);document.querySelectorAll(".opt").forEach(x=>{if(x.textContent==d[2])x.classList.add("ok")})}
+$("f").innerHTML=`<div class="card">${det(d)||""}</div><button onclick="i++;rev()">Next</button>`}
+let M={a:[],b:[],s:null,left:0};
+function match(){const r=Q.slice(i,i+6);if(!r.length)return done();M={t:sh(r),d:sh(r),s:null,left:r.length};drawM()}
+function drawM(){$("main").innerHTML=`<div class="mu">Pick a term, then its definition. ${Q.length-i} left.</div><div class="grid"><div>${M.t.map((x,k)=>`<button class="opt m ${M.s==k?"sel":""} ${x.ok?"ok":""}" ${x.ok?"disabled":""} onclick="M.s=${k};drawM()">${x[0]}</button>`).join("")}</div><div>${M.d.map((x,k)=>`<button class="opt m ${x.ok?"ok":""}" ${x.ok?"disabled":""} onclick="mm(${k},this)">${x[2]}</button>`).join("")}</div></div>`}
+function mm(k,b){if(M.s===null)return;const t=M.t[M.s],d=M.d[k];if(t==d){t.ok=1;M.left--;sc++;M.s=null;if(!M.left){i+=6;if(scope=="rand"||i>=Q.length){i=Q.length;sc=Q.length;return done()}return match()}drawM()}else{miss.add(t[0]);b.classList.add("bad");setTimeout(()=>{M.s=null;drawM()},500)}}
+const nz=s=>s.toLowerCase().replace(/[^a-z0-9]/g,"");
+function ans(d){const t=d[0],p=t.match(/\(([^)]+)\)/);const a=[nz(t),nz(t.replace(/\(.*\)/,""))];if(p)p[1].split(/\s+or\s+/).forEach(x=>a.push(nz(x)));return a}
+function type(){if(i>=Q.length)return done();const d=Q[i];
+$("main").innerHTML=`<div class="mu">Question ${i+1} of ${Q.length}</div><div class="card">${d[2]}</div><input type="text" id="a" placeholder="Type the term" autocomplete="off" onkeydown="if(event.key=='Enter')chk()"><div class="row"><button onclick="chk()">Check</button><button onclick="show()">Show answer</button></div><div id="f"></div>`;$("a").focus()}
+function chk(){const d=Q[i],v=nz($("a").value);if(!v)return;const ok=ans(d).includes(v);if(ok)sc++;else miss.add(d[0]);fin(ok)}
+function show(){miss.add(Q[i][0]);fin(false)}
+function fin(ok){const d=Q[i];$("f").innerHTML=`<div class="card ${ok?"ok":"bad"}">${ok?"Correct":"Answer"}: <b>${d[0]}</b>${det(d)}</div><button onclick="i++;type()">Next</button>`}
+const AQ={
+"Dopamine":["A video game win gives you a burst of reward and the urge to play again.","Cocaine blocks reuptake of this reward chemical, flooding the pleasure pathway.","Too much activity of this transmitter is linked to hallucinations in schizophrenia.","A Parkinson's patient with tremors and slow movement lacks this neurotransmitter.","Antipsychotic drugs work by blocking receptors for this transmitter."],
+"Serotonin":["An SSRI antidepressant keeps more of this mood transmitter in the synapse.","Low levels of this transmitter are tied to depression and poor sleep.","Mixing medications causes fever and agitation from excess of this chemical.","LSD causes hallucinations mainly by acting on this transmitter's receptors.","Low levels are tied to anxiety, obsessive thoughts, and aggression."],
+"Acetylcholine (ACh)":["Curare paralyzes prey by blocking this muscle transmitter.","Alzheimer's destroys neurons that use this memory transmitter.","Your quad contracts when this is released at the neuromuscular junction.","Black widow venom causes spasms by flooding the body with this transmitter.","Botulism toxin blocks release of this transmitter, paralyzing muscles."],
+"GABA":["Anti-anxiety drugs and alcohol calm you by boosting this inhibitory transmitter.","Seizures can occur when too little of this brake-pedal chemical quiets firing.","After a few drinks you feel drowsy because alcohol enhances this chemical.","Barbiturates cause sleepiness by amplifying this transmitter.","The brain's main inhibitory neurotransmitter."],
+"Glutamate":["Strengthening synapses through long-term potentiation relies on this excitatory transmitter.","Too much of this chemical can cause overexcitation, migraines, and seizures.","The brain's most common excitatory neurotransmitter.","The additive MSG can overstimulate neurons that use this transmitter.","After a stroke, neurons die from being flooded with this excitatory transmitter."],
+"Norepinephrine":["Your heart pounds and you feel alert before an exam due to this arousal chemical.","Amphetamines raise alertness by boosting this transmitter and dopamine.","Low levels of this alertness chemical are linked to depression.","This transmitter is chemically related to adrenaline and raises arousal.","Too much causes anxiety and high blood pressure."],
+"Endorphins":["A marathon runner feels euphoric and pain-free late in the race.","Morphine works because it mimics these natural painkillers.","Long-term heroin use reduces the body's natural supply of this chemical.","The brain's own 'morphine within'.","A painful workout is followed by calm and relief thanks to the body's own painkillers."],
+"Epinephrine (adrenaline)":["You nearly get hit by a car; adrenal glands release this to surge your energy.","This hormone raises blood sugar and heart rate during sympathetic arousal.","An EpiPen delivers this to reverse a severe allergic reaction.","Chronic release of this stress hormone can cause high blood pressure.","The fight-or-flight hormone."],
+"Depressants":["Heavy drinking causes slurred speech and blackouts; alcohol is in this class.","Mixing tranquilizers with alcohol risks slowed breathing; both are this class.","Barbiturates belong to this drug class.","Drugs that slow neural activity and body functions.","A drug that lowers inhibitions and impairs judgment while slowing the nervous system."],
+"Opioids":["After surgery morphine is prescribed, with risk of slowed breathing and addiction.","Heroin overdose kills by suppressing breathing; heroin is in this class.","Oxycodone and morphine are examples of this class.","Drugs derived from opium that mimic endorphins.","Stopping them brings sweating, nausea, and cravings."],
+"Stimulants":["Several energy drinks leave you wired and unable to sleep; caffeine is in this class.","Cocaine, meth, and nicotine are all in this class.","After the high, a user 'crashes' into fatigue and depression.","Drugs that excite neural activity and suppress appetite.","Highly addictive nicotine raises heart rate; this class."],
+"Hallucinogens":["A person on LSD sees vivid colors with no real stimulus.","Psilocybin mushrooms distort perception; this is the class.","A user has flashbacks and panic after taking this class.","Drugs that evoke sensory images without sensory input.","THC in marijuana is placed here in some classifications."],
+"Hippocampus":["After surgery a patient cannot form new conscious memories of events.","While studying you store facts as explicit memories in this limbic structure.","Early Alzheimer's damage here causes forgetting of recent events.","This limbic structure processes explicit memories.","Taxi drivers learning city streets show growth in this memory region."],
+"Amygdala":["Seeing a snake triggers instant fear via these almond-shaped clusters.","Stimulating this structure made a caged animal aggressive.","A patient with damage here no longer shows fear of danger.","Limbic structure tied to fear and aggression.","Your heart pounds at a scary movie; this structure drives the emotional response."],
+"Cerebellum":["A drunk person cannot walk a straight line; alcohol impairs this structure.","Damage here causes clumsiness and loss of balance.","The 'little brain' at the rear of the brainstem.","Catching a ball depends on movement coordination from this structure.","Typing without thinking relies on nonverbal learning here."],
+"Thalamus":["Messages from eyes and ears are routed to the cortex through this switchboard.","Smell is the only sense that bypasses this structure.","Damage here disrupts relaying of touch, sight, and hearing.","Sitting on top of the brainstem, it directs sensory input.","Visual signals pass through here before reaching the occipital lobe."],
+"Hypothalamus":["It regulates hunger, thirst, and body temperature.","It controls the pituitary, linking nervous and endocrine systems.","Stimulating it produces pleasure and reward in rats.","Damage here causes extreme changes in eating.","You shiver or sweat to keep body temperature stable thanks to this structure."]};
+const EX={"Acetylcholine (ACh)":["Glutamate"],"Glutamate":["Acetylcholine (ACh)"],"Epinephrine (adrenaline)":["Norepinephrine"],"Norepinephrine":["Epinephrine (adrenaline)"],"Endorphins":["Dopamine"],"Dopamine":["Endorphins"],"Opioids":["Depressants"],"Depressants":["Opioids"]};
+function gloss(){$("main").innerHTML=Object.entries(C).filter(([k])=>cats.has(k)).map(([k,v])=>`<h2 class="gh">${v}</h2><div class="gg">${D.filter(d=>d[1]==k).map(d=>`<div class="gt"><b>${d[0]}</b><span>${d[2]}</span></div>`).join("")}</div>`).join("")}
+function app(){Q=sh(Object.entries(AQ).filter(([t])=>{const d=D.find(x=>x[0]==t);return cats.has(d[1])&&(!miss_only||miss.has(t))}).flatMap(([t,a])=>a.map(q=>[q,t])));if(scope=="rand")Q=Q.slice(0,10);i=0;sc=0;ap()}
+function ap(){if(i>=Q.length)return done();const[q,t]=Q[i],d=D.find(x=>x[0]==t);const o=sh([d,...sh(D.filter(x=>x!=d&&x[1]==d[1]&&!(EX[t]||[]).includes(x[0]))).slice(0,3)]);
+$("main").innerHTML=`<div class="mu">Application question ${i+1} of ${Q.length}. Which term fits?</div><div class="card">${q}</div>${o.map(x=>`<button class="opt" onclick="pa(this,${x==d})">${x[0]}</button>`).join("")}<div id="f"></div>`}
+function pa(b,ok){document.querySelectorAll(".opt").forEach(x=>x.disabled=true);const t=Q[i][1],d=D.find(x=>x[0]==t);b.classList.add(ok?"ok":"bad");if(ok)sc++;else{miss.add(t);document.querySelectorAll(".opt").forEach(x=>{if(x.textContent==t)x.classList.add("ok")})}
+$("f").innerHTML=`<div class="card">Answer: <b>${t}</b>. ${d[2]}${det(d)}</div><button onclick="i++;ap()">Next</button>`}
+
+const BR={frontal:["Frontal lobes","#4da3ff","Planning, judgment, decision making, speaking, and voluntary movement; personality.","Damage (Phineas Gage) changes personality, impulse control, and planning."],
+parietal:["Parietal lobes","#7c8cff","Receive touch and body-position input; spatial awareness.","Damage causes neglect of one side of space and trouble locating body parts."],
+occipital:["Occipital lobes","#35c7e8","Visual areas receive information from the opposite visual field.","Damage causes blindness even when the eyes work."],
+temporal:["Temporal lobes","#5ad1a4","Auditory areas receive sound mainly from the opposite ear; language comprehension.","Damage impairs hearing, face recognition, and understanding speech."],
+motor:["Motor cortex","#ffb454","Rear of the frontal lobes; sends signals for voluntary movement. Finely controlled parts like fingers get more cortex.","Damage causes weakness or paralysis on the opposite side."],
+soma:["Somatosensory cortex","#ff7aa8","Front of the parietal lobes; registers touch, pressure, temperature, and body movement.","Damage reduces sensation on the opposite side."],
+assoc:["Association areas","#c28bff","Found in all four lobes (no shape here); integrate information for learning, remembering, thinking, and speaking.","Damage disrupts higher mental functions such as judgment and language."],
+cerebellum:["Cerebellum","#ff9f5a","Coordinates voluntary movement and balance; nonverbal learning and memory.","Damage causes clumsiness and poor balance (alcohol impairs it)."],
+brainstem:["Brainstem","#9aa8c9","Oldest, innermost part; automatic survival functions. Includes medulla and reticular formation.","Severe damage is life-threatening; loss of function defines brain death."],
+medulla:["Medulla","#d9e2ff","Base of the brainstem; controls heartbeat and breathing.","Damage can stop breathing; depressants and opioids can slow it."],
+reticular:["Reticular formation","#ffe27a","Brainstem network controlling arousal, alertness, and attention (RAS).","Damage can cause coma."],
+corpus:["Corpus callosum","#ffffff","Band of fibers connecting the two hemispheres, carrying messages between them.","Cutting it creates a split brain: hemispheres cannot share information easily."],
+thalamus:["Thalamus","#ff5c8a","Sensory switchboard on top of the brainstem; routes messages to the cortex (except smell).","Damage disrupts relay of sensory information."],
+hypo:["Hypothalamus","#34e0a1","Directs eating, drinking, body temperature; controls the pituitary; linked to emotion and reward.","Damage disrupts eating and temperature regulation."],
+amygdala:["Amygdala","#ff4d4d","Almond-shaped clusters linked to fear and aggression.","Damage reduces fear responses."],
+hippo:["Hippocampus","#c8ff5a","Forms new explicit (conscious) memories.","Damage prevents forming new memories; Alzheimer's attacks it early."]};
+const P='path d="',SH={frontal:P+'M52 190C40 110 100 45 200 42C245 41 275 44 290 48L268 190C240 195 200 205 170 215C110 225 62 225 52 190Z" fill="@" stroke="#04204f" stroke-width="2"',
+parietal:P+'M290 48C350 44 405 58 435 85L425 185C380 185 320 188 268 190Z" fill="@" stroke="#04204f" stroke-width="2"',
+occipital:P+'M435 85C490 110 520 170 505 215C490 245 450 245 425 235L425 185Z" fill="@" stroke="#04204f" stroke-width="2"',
+temporal:P+'M170 215C200 205 240 195 268 190C320 188 380 185 425 185L425 235C400 262 340 275 280 272C220 268 180 255 160 235Z" fill="@" stroke="#04204f" stroke-width="2"',
+cerebellum:P+'M400 255C440 235 500 245 510 275C500 305 440 312 405 295Z" fill="@" stroke="#04204f" stroke-width="2"',
+brainstem:P+'M320 262L370 262L378 355L338 360Z" fill="@" stroke="#04204f" stroke-width="2"',
+medulla:P+'M338 325L378 325L376 372L342 374Z" fill="@" stroke="#04204f" stroke-width="2"',
+reticular:'ellipse cx="350" cy="295" rx="9" ry="24" fill="@"',
+motor:P+'M272 52L250 188" stroke="@" stroke-width="14" fill="none"',soma:P+'M300 52L284 186" stroke="@" stroke-width="14" fill="none"',
+corpus:P+'M150 150C220 100 360 100 430 150" stroke="@" stroke-width="9" fill="none"',
+thalamus:'ellipse cx="290" cy="165" rx="26" ry="18" fill="@"',hypo:'ellipse cx="290" cy="205" rx="16" ry="11" fill="@"',
+amygdala:'circle cx="225" cy="232" r="11" fill="@"',hippo:P+'M232 242C265 220 320 226 345 248" stroke="@" stroke-width="8" fill="none"'};
+const LB={frontal:[120,140],parietal:[355,115],occipital:[468,165],temporal:[395,222],cerebellum:[455,280],brainstem:[290,310],medulla:[300,352],reticular:[412,328],motor:[236,34],soma:[330,34],corpus:[290,114],thalamus:[290,168],hypo:[345,208],amygdala:[190,236],hippo:[290,262]};
+const LOBE=["frontal","parietal","occipital","temporal","motor","soma"];let BL=false,BS="frontal",BT=null;
+function brain(){$("main").innerHTML=`<div class="bgrid"><div class="card"><div class="row" style="margin:0 0 8px"><button class="${BL?"on":""}" onclick="BL=!BL;brain()">Deep view</button><button onclick="bq()">Quiz me: click the part</button></div><svg viewBox="0 0 600 400" class="sv ${BL?"deep":""}">${Object.entries(SH).map(([k,a])=>`<${a.replace(/@/g,BR[k][1])} data-k="${k}" class="r ${LOBE.includes(k)?"lobe":""}" onclick="bs('${k}')"/>`).join("")}${Object.entries(LB).map(([k,[x,y]])=>`<text class="lb" x="${x}" y="${y}">${BR[k][0]}</text>`).join("")}</svg><div class="pill" id="bq">Click any part to learn about it, or toggle Deep view to see inner structures.</div></div><div><div class="card" id="bi"></div><div class="blist">${Object.entries(BR).map(([k,v])=>`<button onclick="bs('${k}')" style="border-color:${v[1]}">${v[0]}</button>`).join("")}</div></div></div>`;bs(BS)}
+function bq(){BT=Object.keys(SH)[Math.random()*15|0];$("bq").innerHTML="<b>Find it:</b> "+BR[BT][0]}
+function bs(k){if(BT&&k!=BT){$("bq").innerHTML="That is the "+BR[k][0]+". Find: <b>"+BR[BT][0]+"</b>";return}if(BT){$("bq").innerHTML="Correct! Press Quiz me for another.";BT=null}
+BS=k;const v=BR[k];document.querySelectorAll(".r").forEach(e=>e.classList.toggle("sel",e.dataset.k==k));$("bi").innerHTML=`<h3 style="color:${v[1]};margin:0 0 8px">${v[0]}</h3><p><b>Function:</b> ${v[2]}</p><p><b>If damaged:</b> ${v[3]}</p>`}
+const NP={dend:["Dendrites","Branching fibers that receive messages from other neurons and send them toward the cell body."],body:["Cell body (soma)","Contains the nucleus and life-support machinery; sums incoming signals and decides whether to fire."],hill:["Axon hillock","Where the axon begins; the action potential starts here once input reaches threshold."],axon:["Axon","Long fiber that carries the impulse away from the cell body to other neurons, muscles, or glands. Bundles of axons form nerves."],myelin:["Myelin sheath","Fatty insulation made by glial cells; makes impulses faster as they jump between gaps. Loss of myelin occurs in multiple sclerosis."],term:["Axon terminals and synapse","Release neurotransmitters into the synaptic gap; they bind receptors on the next neuron and excite or inhibit it."]};
+const PH=[["Resting potential (-70 mV)","The inside is negative relative to the outside; closed channels keep Na+ out."],["Threshold (-55 mV)","Enough excitatory input reaches the hillock. Below threshold nothing happens; at threshold the neuron fires."],["Depolarization","Na+ channels open and Na+ rushes in, making the inside briefly positive (about +40 mV)."],["Repolarization","Na+ channels close and K+ flows out, returning the inside toward negative."],["Refractory period","Pumps restore the resting charge; the neuron cannot fire again for a moment, so impulses travel one way."]];
+const SYM={none:"Neurotransmitters cross the gap and bind receptors, exciting or inhibiting the next neuron. Then the sender reabsorbs them (reuptake).",ago:"An agonist (like morphine at endorphin receptors) mimics the neurotransmitter and also binds receptors, extra orange dots.",ant:"An antagonist (like curare blocking ACh) blocks receptors, so the message does not get through; transmitter cannot bind.",reu:"Blocking reuptake (SSRIs, cocaine) leaves neurotransmitter in the gap longer, prolonging its effect."};
+function neuron(){$("main").innerHTML=`<div class="card"><h3 class="ch">Anatomy of a neuron: click a part</h3><svg viewBox="0 0 700 180" class="sv">
+<g class="n" onclick="ns('dend')"><path d="M122 78L70 40M122 90L48 90M122 102L70 140M70 40L48 28M70 140L48 152" stroke="#4da3ff" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+<g class="n" onclick="ns('axon')"><path d="M180 90H590" stroke="#7cc4ff" stroke-width="6"/></g>
+<g class="n" onclick="ns('myelin')">${[235,325,415,505].map(x=>`<rect x="${x-34}" y="76" width="68" height="28" rx="14" fill="#ffd27a"/>`).join("")}</g>
+<g class="n" onclick="ns('body')"><circle cx="150" cy="90" r="32" fill="#2f78e6"/><circle cx="150" cy="90" r="10" fill="#0a2a66"/></g>
+<g class="n" onclick="ns('hill')"><path d="M176 74L204 90L176 106Z" fill="#6cb6ff"/></g>
+<g class="n" onclick="ns('term')"><path d="M590 90L625 55M590 90L630 90M590 90L625 125" stroke="#7cc4ff" stroke-width="5"/><circle cx="632" cy="52" r="9" fill="#ff7aa8"/><circle cx="640" cy="90" r="9" fill="#ff7aa8"/><circle cx="632" cy="128" r="9" fill="#ff7aa8"/></g>
+<circle id="imp" cx="190" cy="90" r="9" fill="#fff" opacity="0"/></svg><div class="pill" id="ni">Click dendrites, cell body, axon, myelin, or terminals.</div></div>
+<div class="card"><h3 class="ch">Action potential: set a stimulus and fire</h3><svg viewBox="0 0 700 160" class="sv"><line x1="0" x2="700" y1="90" y2="90" stroke="#ff7aa8" stroke-dasharray="5"/><text x="560" y="84" fill="#ff7aa8" font-size="12">threshold</text><path id="ap" d="M20 110H150L175 90L200 15L240 110L275 130L320 110H680" fill="none" stroke="#7cc4ff" stroke-width="3"/>${[[80,110],[175,90],[188,52],[225,62],[275,130]].map(([x,y],i)=>`<circle class="mk" cx="${x}" cy="${y}" r="8" onclick="ps(${i})"/>`).join("")}<circle id="gd" r="7" fill="#fff" cx="20" cy="110"/></svg>
+<div class="row"><label>Stimulus strength <input type="range" id="st" min="0" max="100" value="70"></label><button onclick="fire()"><i class="fa-solid fa-bolt"></i> Fire</button></div><div class="pill" id="pi">Click the orange dots to see each phase, or press Fire. Threshold is 50.</div></div>
+<div class="card"><h3 class="ch">Synapse: neurotransmitters and drugs</h3><svg viewBox="0 0 700 150" class="sv" id="sy"><path d="M0 25H230Q270 75 230 125H0Z" fill="#2f78e6"/><path d="M700 25H470Q430 75 470 125H700Z" fill="#16408f"/>${[45,68,91].map(y=>`<rect x="448" y="${y}" width="8" height="14" fill="#ffb454"/>`).join("")}</svg>
+<div class="row"><select id="dr" onchange="$('sm').innerHTML=SYM[this.value]"><option value="none">No drug</option><option value="ago">Agonist</option><option value="ant">Antagonist</option><option value="reu">Reuptake blocker</option></select><button onclick="rel()">Release neurotransmitter</button></div><div class="pill" id="sm">${SYM.none}</div></div>`}
+function ns(k){$("ni").innerHTML=`<b>${NP[k][0]}:</b> ${NP[k][1]}`}
+function ps(i){$("pi").innerHTML=`<b>${PH[i][0]}:</b> ${PH[i][1]}`}
+function fire(){const v=+$("st").value;if(v<50){$("pi").innerHTML="<b>Below threshold:</b> no action potential. A neuron is all-or-none, so weak stimuli do nothing.";return}
+const p=$("ap"),L=p.getTotalLength()*.54,g=$("gd"),m=$("imp"),t0=performance.now();m.setAttribute("opacity",1);
+(function f(t){const k=Math.min(1,(t-t0)/2600),q=p.getPointAtLength(k*L);g.setAttribute("cx",q.x);g.setAttribute("cy",q.y);m.setAttribute("cx",190+k*400);ps(q.x<150?0:q.x<200?2:q.x<240?3:4);
+if(k<1)requestAnimationFrame(f);else{m.setAttribute("opacity",0);$("pi").innerHTML="<b>Done:</b> the impulse traveled the axon. A stronger stimulus makes the neuron fire more often, not with a bigger spike (all-or-none)."}})(t0)}
+function rel(){const s=$("sy"),d=$("dr").value;s.querySelectorAll(".nt").forEach(e=>e.remove());const dots=[];
+for(let k=0;k<(d=="ago"?12:8);k++){const c=document.createElementNS("http://www.w3.org/2000/svg","circle");c.setAttribute("class","nt");c.setAttribute("cx",245);c.setAttribute("cy",48+(k*17)%52);c.setAttribute("r",6);c.setAttribute("fill",k>=8?"#ffb454":"#7cff9e");c.style.transition="transform 1.4s,opacity .8s";s.appendChild(c);dots.push(c)}
+setTimeout(()=>dots.forEach(c=>c.style.transform=`translateX(${d=="ant"?110:190}px)`),50);
+if(d!="reu"&&d!="ago")setTimeout(()=>dots.forEach(c=>{c.style.transform="translateX(0)";c.style.opacity=.2}),2200)}
+go();
+new MutationObserver(()=>{const f=$("main").firstElementChild;if(f&&f.classList.contains("mu")&&!f.querySelector(".pg")&&Q.length&&!["gloss","browse","brain","neuron"].includes(mode))f.insertAdjacentHTML("beforeend",`<div class="pg"><i style="width:${Math.min(100,i/Q.length*100)}%"></i></div>`)}).observe($("main"),{childList:true});
+</script></body></html>
