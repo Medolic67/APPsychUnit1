@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<title>NeuroMaster - AP Psychology Study Hub</title>
+<style>
+:root{--bg:#050f26;--p:#0b1f4a;--p2:#16408f;--ln:#1f4a9c;--ac:#4da3ff;--mu:#9fbdf0}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:radial-gradient(circle at 15% 10%,rgba(77,163,255,.14),transparent 40%),radial-gradient(circle at 85% 90%,rgba(40,100,230,.16),transparent 40%) fixed,var(--bg);color:#e6eeff;min-height:100vh;display:flex;flex-direction:column}
+header{padding:24px;text-align:center;border-bottom:1px solid var(--ln);background:rgba(11,31,74,.85);backdrop-filter:blur(10px)}
+h1{font:800 32px 'Plus Jakarta Sans';margin:0;color:#fff;display:flex;align-items:center;justify-content:center;gap:12px}
+.subtitle{color:var(--mu);margin-top:8px;font-size:16px}
+main{max-width:960px;margin:40px auto;padding:0 20px;flex:1;width:100%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:linear-gradient(160deg,rgba(22,64,143,.35),rgba(11,31,74,.9));border:1px solid var(--ln);border-radius:16px;padding:24px;box-shadow:0 6px 24px rgba(0,0,0,.35);transition:transform .2s,border-color .2s;display:flex;flex-direction:column;justify-content:space-between}
+.card:hover{transform:translateY(-4px);border-color:var(--ac)}
+.card.disabled{opacity:0.5;pointer-events:none;filter:grayscale(0.6)}
+.card h2{margin:0 0 10px 0;font-size:20px;color:var(--ac);display:flex;align-items:center;gap:10px}
+.card p{color:var(--mu);font-size:14px;line-height:1.5;margin-bottom:20px}
+.btn{display:inline-block;background:var(--ac);color:#04122a;font-weight:700;padding:10px 18px;border-radius:8px;text-decoration:none;text-align:center;transition:background .2s}
+.btn:hover{background:#3a8ee6}
+.badge{background:rgba(77,163,255,.15);border:1px solid var(--ln);color:var(--ac);padding:2px 8px;border-radius:99px;font-size:12px;font-family:'JetBrains Mono',monospace}
+footer{text-align:center;padding:20px;color:var(--mu);font-size:13px;border-top:1px solid var(--ln)}
+</style>
+</head>
+<body>
+<header>
+  <h1><i class="fa-solid fa-brain" style="color:var(--ac)"></i> NeuroMaster Hub</h1>
+  <div class="subtitle">AP Psychology Interactive Study Suite</div>
+</header>
+<main>
+  <div class="grid">
+    <div class="card">
+      <div>
+        <h2><i class="fa-solid fa-flask"></i> Unit 0</h2>
+        <p>Foundations of Psychological Science: Research Methods, Statistics, Thinking, and Ethics.</p>
+        <span class="badge">50 Key Terms</span>
+      </div>
+      <a href="unit0.html" class="btn" style="margin-top:16px;">Launch Unit 0</a>
+    </div>
+
+    <div class="card">
+      <div>
+        <h2><i class="fa-solid fa-network-wired"></i> Unit 1</h2>
+        <p>Biological Bases of Behavior: Neuroscience, Neurotransmitters, Brain Structures, and Genetics.</p>
+        <span class="badge">75 Key Terms</span>
+      </div>
+      <a href="unit1.html" class="btn" style="margin-top:16px;">Launch Unit 1</a>
+    </div>
+
+    <div class="card disabled">
+      <div>
+        <h2><i class="fa-solid fa-lock"></i> Unit 2</h2>
+        <p>Cognition: Memory, Intelligence, Learning, and Problem Solving.</p>
+        <span class="badge">Locked</span>
+      </div>
+      <a href="#" class="btn">Coming Soon</a>
+    </div>
+  </div>
+</main>
+<footer>AP Psychology Exam Prep</footer>
+</body>
+</html>

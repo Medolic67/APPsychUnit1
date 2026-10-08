@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<title>Unit 1: Biological Bases of Behavior</title>
+<style>
+:root{--bg:#050f26;--p:#0b1f4a;--p2:#16408f;--ln:#1f4a9c;--ac:#4da3ff;--mu:#9fbdf0;--ok:#3ecf8e;--no:#ff6b81}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:radial-gradient(circle at 15% 10%,rgba(77,163,255,.14),transparent 40%),radial-gradient(circle at 85% 90%,rgba(40,100,230,.16),transparent 40%) fixed,var(--bg);color:#e6eeff;min-height:100vh}
+header{position:sticky;top:0;z-index:9;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:12px 18px;background:rgba(11,31,74,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.hl{display:flex;gap:12px;align-items:center}
+.logo{width:42px;height:42px;border-radius:12px;background:rgba(77,163,255,.18);border:1px solid var(--ac);display:grid;place-items:center;color:var(--ac);font-size:20px;box-shadow:0 0 16px rgba(77,163,255,.4);cursor:pointer}
+h1{font:800 20px 'Plus Jakarta Sans';margin:0;display:flex;align-items:center;gap:8px}
+.unit-select{background:rgba(5,15,38,.8);color:var(--ac);border:1px solid var(--ac);padding:4px 8px;border-radius:8px;font:700 13px 'Plus Jakarta Sans';cursor:pointer;outline:none}
+.unit-select:focus{box-shadow:0 0 0 2px var(--ac)}
+.stats{display:flex;gap:16px;font:500 13px 'JetBrains Mono',monospace;background:rgba(5,15,38,.7);padding:8px 14px;border-radius:12px;border:1px solid var(--ln)}
+nav{display:flex;flex-direction:row;flex-wrap:wrap;gap:4px;padding:5px;background:rgba(5,15,38,.6);border:1px solid var(--ln);border-radius:12px;width:auto}
+nav .tab{width:auto;border:0;background:none;color:var(--mu);font:600 13px 'Plus Jakarta Sans';padding:8px 12px;border-radius:99px;cursor:pointer}
+nav .tab:hover{color:#fff}
+nav .tab.on{background:var(--ac);color:#04122a;box-shadow:0 0 14px rgba(77,163,255,.5)}
+#rt{max-width:1100px;margin:0 auto;padding:10px}
+main{max-width:960px;margin:0 auto;padding-bottom:60px}
+.card{background:linear-gradient(160deg,rgba(22,64,143,.35),rgba(11,31,74,.9));border:1px solid var(--ln);border-radius:16px;padding:22px;margin:12px 0;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.fc{min-height:260px;display:flex;flex-direction:column;justify-content:center;cursor:pointer;text-align:center;font-size:20px;background:linear-gradient(145deg,#1553b8,#0b1f4a);box-shadow:0 0 30px rgba(77,163,255,.25)}
+.fc .t{font-size:26px;font-weight:700}.mu{color:var(--mu);font-size:14px}
+button{background:var(--p);color:#fff;border:1px solid var(--ln);border-radius:8px;padding:8px 14px;cursor:pointer;font-family:inherit}
+button:hover{background:var(--p2)}
+button.on{background:var(--ac);color:#04122a;font-weight:600}
+.opt{display:block;width:100%;text-align:left;margin:7px 0;border-radius:12px;padding:12px 16px;transition:transform .1s}
+.opt:hover:not(:disabled){transform:translateX(4px);border-color:var(--ac)}
+.ok{background:#12503a!important;border-color:var(--ok)}
+.bad{background:#5a1c2c!important;border-color:var(--no)}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.bar{display:flex;flex-wrap:wrap;gap:6px;padding:6px 0}
+.tag{font:12px system-ui;color:var(--ac);padding:2px 8px;border-radius:99px;background:rgba(77,163,255,.15);border:1px solid var(--ln);display:inline-block;margin-bottom:8px}
+#flt summary{cursor:pointer;font-weight:600}
+input[type=text]{width:100%;padding:10px;border-radius:8px;border:1px solid var(--ln);background:var(--bg);color:#fff;margin:8px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hl">
+    <div class="logo" onclick="switchUnit(document.getElementById('unitSel').value)"><i class="fa-solid fa-brain"></i></div>
+    <div>
+      <h1>NeuroMaster 
+        <select id="unitSel" class="unit-select" onchange="switchUnit(this.value)">
+          <option value="unit0">Unit 0: Foundations of Psych Science</option>
+          <option value="unit1" selected>Unit 1: Biological Bases of Behavior</option>
+          <option value="unit2" disabled>Unit 2: Cognition (Locked)</option>
+          <option value="unit3" disabled>Unit 3: Development & Learning (Locked)</option>
+          <option value="unit4" disabled>Unit 4: Social Psych & Personality (Locked)</option>
+          <option value="unit5" disabled>Unit 5: Mental & Physical Health (Locked)</option>
+        </select>
+      </h1>
+      <div class="mu">AP Psychology Study Suite</div>
+    </div>
+  </div>
+  <div class="stats" id="cnt"></div>
+  <nav id="modes"></nav>
+</header>
+
+<div id="rt">
+  <details open class="card" id="flt">
+    <summary><i class="fa-solid fa-sliders"></i> Scope & Filters</summary>
+    <div class="bar" id="scope"></div>
+    <div class="bar" id="cats"></div>
+  </details>
+  <main id="main"></main>
+</div>
+
+<script>
+function switchUnit(val){
+  if(val==='unit1'){
+    window.location.href='fughriugh.html';
+  } else if(val==='unit0'){
+    window.location.href='unit0.html';
+  }
+}
+
+const C={
+  N:"Neuron & Neural Signaling",
+  NT:"Neurotransmitters & Drugs",
+  NS:"Nervous & Endocrine Systems",
+  B:"Brain Structures & Functions",
+  G:"Genetics, Plasticity & Consciousness"
+};
+
+const D=[
+  ["Neuron","N","A nerve cell; the basic building block of the nervous system."],
+  ["Dendrites","N","A neuron's often bushy, branching extensions that receive and integrate messages, conducting impulses toward the cell body."],
+  ["Axon","N","The neuron extension that passes messages through its branches to other neurons or to muscles or glands."],
+  ["Myelin sheath","N","A fatty tissue layer segmentally encasing the axons of some neurons; enables vastly greater transmission speed of neural impulses."],
+  ["Glial cells","N","Cells in the nervous system that support, nourish, and protect neurons; they also play a role in learning, thinking, and memory."],
+  ["Action potential","N","A neural impulse; a brief electrical charge that travels down an axon."],
+  ["Threshold","N","The level of stimulation required to trigger a neural impulse."],
+  ["Refractory period","N","In neural processing, a brief resting pause that occurs after a neuron has fired; subsequent action potentials cannot occur until the axon returns to its resting state."],
+  ["All-or-none response","N","A neuron's reaction of either firing (with a full-strength response) or not firing."],
+  ["Synapse","N","The junction between the axon tip of the sending neuron and the dendrite or cell body of the receiving neuron."],
+  ["Neurotransmitters","NT","Chemical messengers that cross the synaptic gaps between neurons."],
+  ["Reuptake","NT","A neurotransmitter's reabsorption by the sending neuron."],
+  ["Endorphins","NT","Natural, opiate-like neurotransmitters linked to pain control and to pleasure."],
+  ["Agonist","NT","A molecule that increases a neurotransmitter's action."],
+  ["Antagonist","NT","A molecule that inhibits or blocks a neurotransmitter's action."],
+  ["Nervous system","NS","The body's speedy, electrochemical communication network, consisting of all the nerve cells of the peripheral and central nervous systems."],
+  ["Central nervous system (CNS)","NS","The brain and spinal cord."],
+  ["Peripheral nervous system (PNS)","NS","The sensory and motor neurons that connect the central nervous system to the rest of the body."],
+  ["Nerves","NS","Bundled axons that form neural cables connecting the central nervous system with muscles, glands, and sense organs."],
+  ["Sensory (afferent) neurons","NS","Neurons that carry incoming information from the body's tissues and sensory receptors to the brain and spinal cord."],
+  ["Motor (efferent) neurons","NS","Neurons that carry outgoing information from the brain and spinal cord to the muscles and glands."],
+  ["Interneurons","NS","Neurons within the brain and spinal cord that communicate internally and process information between sensory inputs and motor outputs."],
+  ["Somatic nervous system","NS","The division of the peripheral nervous system that controls the body's skeletal muscles."],
+  ["Autonomic nervous system","NS","The part of the peripheral nervous system that controls the glands and the muscles of the internal organs."],
+  ["Sympathetic nervous system","NS","The division of the autonomic nervous system that arouses the body, mobilizing its energy."],
+  ["Parasympathetic nervous system","NS","The division of the autonomic nervous system that calms the body, conserving its energy."],
+  ["Reflex","NS","A simple, automatic response to a sensory stimulus, such as the knee-jerk response."],
+  ["Endocrine system","NS","The body's 'slow' chemical communication system; a set of glands that secrete hormones into the bloodstream."],
+  ["Hormones","NS","Chemical messengers that are manufactured by the endocrine glands, travel through the bloodstream, and affect other tissues."],
+  ["Adrenal glands","NS","A pair of endocrine glands that sit just above the kidneys and secrete hormones (epinephrine and norepinephrine) that help arouse the body in times of stress."],
+  ["Pituitary gland","NS","The endocrine system's most influential gland. Under the influence of the hypothalamus, the pituitary regulates growth and controls other endocrine glands."],
+  ["Lesion","B","Tissue destruction. A brain lesion is a naturally or experimentally caused destruction of brain tissue."],
+  ["Electroencephalogram (EEG)","B","An amplified recording of the waves of electrical activity sweeping across the brain's surface. These waves are measured by electrodes placed on the scalp."],
+  ["PET (positron emission tomography) scan","B","A visual display of brain activity that detects where a radioactive form of glucose goes while the brain performs a given task."],
+  ["MRI (magnetic resonance imaging)","B","A technique that uses magnetic fields and radio waves to produce computer-generated images of soft tissue."],
+  ["fMRI (functional MRI)","B","A technique for revealing bloodflow and, therefore, brain activity by comparing successive MRI scans."],
+  ["Brainstem","B","The oldest part and central core of the brain, beginning where the spinal cord swells as it enters the skull; responsible for automatic survival functions."],
+  ["Medulla","B","The base of the brainstem; controls heartbeat and breathing."],
+  ["Thalamus","B","The brain's sensory control center, located on top of the brainstem; it directs messages to the sensory receiving areas in the cortex and transmits replies to the cerebellum and medulla."],
+  ["Reticular formation","B","A nerve network that travels through the brainstem into the thalamus and plays an important role in controlling arousal."],
+  ["Cerebellum","B","The 'little brain' at the rear of the brainstem; functions include processing sensory input, coordinating movement output and balance, and enabling nonverbal learning and memory."],
+  ["Limbic system","B","Neural system located below the cerebral hemispheres; associated with emotions and drives."],
+  ["Amygdala","B","Two lima-bean-sized neural clusters in the limbic system; linked to emotion."],
+  ["Hypothalamus","B","A neural structure lying below the thalamus; it directs several maintenance activities (eating, drinking, body temperature), helps govern the endocrine system via the pituitary gland, and is linked to emotion and reward."],
+  ["Hippocampus","B","A neural center located in the limbic system; helps process explicit (conscious) memories of facts and events for storage."],
+  ["Cerebral cortex","B","The intricate fabric of interconnected neural cells covering the cerebral hemispheres; the body's ultimate control and information-processing center."],
+  ["Frontal lobes","B","The portion of the cerebral cortex lying just behind the forehead; involved in speaking and muscle movements and in making plans and judgments."],
+  ["Parietal lobes","B","The portion of the cerebral cortex lying at the top of the head and toward the rear; receives sensory input for touch and body position."],
+  ["Occipital lobes","B","The portion of the cerebral cortex lying at the back of the head; includes areas that receive information from the visual fields."],
+  ["Temporal lobes","B","The portion of the cerebral cortex lying roughly above the ears; includes the auditory areas."],
+  ["Motor cortex","B","An area at the rear of the frontal lobes that controls voluntary movements."],
+  ["Somatosensory cortex","B","An area at the front of the parietal lobes that registers and processes body touch and movement sensations."],
+  ["Association areas","B","Areas of the cerebral cortex that are not involved in primary motor or sensory functions; rather, they are involved in higher mental functions."],
+  ["Plasticity","G","The brain's ability to change, especially during childhood, by reorganizing after damage or by building new pathways based on experience."],
+  ["Neurogenesis","G","The formation of new neurons."],
+  ["Corpus callosum","B","The large band of neural fibers connecting the two brain hemispheres and carrying messages between them."],
+  ["Split brain","B","A condition resulting from surgery that isolates the brain's two hemispheres by cutting the fibers connecting them."],
+  ["Consciousness","G","Our subjective awareness of ourselves and our environment."],
+  ["Dual processing","G","The principle that information is often simultaneously processed on separate conscious and unconscious tracks."],
+  ["Blindsight","G","A condition in which a person can respond to a visual stimulus without consciously experiencing it."],
+  ["Parallel processing","G","Processing many aspects of a problem simultaneously; generally used to process well-learned information or to solve easy problems."],
+  ["Sequential processing","G","Processing one aspect of a problem at a time; generally used to process new information or to solve complex problems."],
+  ["Behavior genetics","G","The study of the relative power and limits of genetic and environmental influences on behavior."],
+  ["Heredity","G","The genetic transfer of characteristics from parents to offspring."],
+  ["Environment","G","Every nongenetic influence, from prenatal nutrition to the people and things around us."],
+  ["Chromosomes","G","Threadlike structures made of DNA molecules that contain the genes."],
+  ["DNA (deoxyribonucleic acid)","G","A complex molecule containing the genetic information that makes up the chromosomes."],
+  ["Genes","G","The biochemical units of heredity that make up the chromosomes; segments of DNA capable of synthesizing proteins."],
+  ["Genome","G","The complete instructions for making an organism, consisting of all the genetic material in that organism's chromosomes."],
+  ["Identical (monozygotic) twins","G","Develop from a single fertilized egg that splits in two, creating two genetically identical organisms."],
+  ["Fraternal (dizygotic) twins","G","Develop from separate fertilized eggs. They are genetically no closer than ordinary brothers and sisters, but they share a prenatal environment."],
+  ["Heritability","G","The proportion of variation among individuals in a group that we can attribute to genes."],
+  ["Epigenetics","G","The study of environmental influences on gene expression that occur without a DNA change."],
+  ["Evolutionary psychology","G","The study of the evolution of behavior and the mind, using principles of natural selection."],
+  ["Natural selection","G","The principle that inherited traits that better enable an organism to survive and reproduce in a particular environment will most likely be passed on."]
+];
+
+const $=id=>document.getElementById(id);
+const sh=a=>{a=[...a];for(let i=a.length;i>1;){let j=Math.random()*i--|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+
+let mode="flash",scope="all",cats=new Set(Object.keys(C)),miss=new Set(),miss_only=false;
+const MODES={gloss:"Glossary",flash:"Flashcards",quiz:"Quiz",match:"Matching",type:"Type-In"};
+const IC={gloss:"book-open",flash:"clone",quiz:"list-check",match:"puzzle-piece",type:"keyboard"};
+
+function pool(n){let p=sh(D.filter(d=>cats.has(d[1])&&(!miss_only||miss.has(d[0]))));return scope=="rand"?p.slice(0,n):p}
+
+function bar(){
+  $("modes").innerHTML=Object.keys(MODES).map(k=>`<button class="tab ${k==mode?"on":""}" onclick="mode='${k}';go()"><i class="fa-solid fa-${IC[k]}"></i> ${MODES[k]}</button>`).join("");
+  $("scope").innerHTML=[["rand","Random 10"],["all","All Terms"]].map(([k,v])=>`<button class="${k==scope?"on":""}" onclick="scope='${k}';go()">${v}</button>`).join("")+`<button class="${miss_only?"on":""}" onclick="miss_only=!miss_only;go()">Missed (${miss.size})</button>`;
+  $("cats").innerHTML=`<button onclick="cats=new Set(Object.keys(C));go()">All Categories</button>`+Object.entries(C).map(([k,v])=>`<button class="${cats.has(k)?"on":""}" onclick="tog('${k}')">${v}</button>`).join("");
+  $("cnt").innerHTML=`<span><i class="fa-solid fa-circle-check" style="color:#3ecf8e"></i> Terms: ${D.filter(d=>cats.has(d[1])).length}</span><span><i class="fa-solid fa-triangle-exclamation" style="color:#ffb454"></i> Missed: ${miss.size}</span>`;
+}
+
+function tog(k){cats.has(k)?cats.delete(k):cats.add(k);if(!cats.size)cats.add(k);go()}
+
+let Q=[],i=0,sc=0,flip=false;
+
+function go(){
+  bar();
+  Q=pool(mode=="match"?6:10);
+  i=0;sc=0;flip=false;
+  if(!Q.length&&mode!=="gloss"){
+    $("main").innerHTML='<div class="card">No terms match your selection criteria. Clear filters to continue.</div>';
+    return;
+  }
+  ({gloss,flash,quiz,match,type:typ})[mode]();
+}
+
+function done(){
+  $("main").innerHTML=`<div class="card"><h2>Session Completed!</h2><p>Score: ${sc} / ${Q.length}</p><button onclick="go()">Restart</button></div>`;
+}
+
+function gloss(){
+  $("main").innerHTML='<input type="text" id="q" placeholder="Search Unit 1 terms or definitions..." oninput="gl()"><div id="gl"></div>';
+  gl();
+}
+
+function gl(){
+  const s=($("q").value||"").toLowerCase();
+  $("gl").innerHTML=D.filter(d=>cats.has(d[1])&&(d[0]+d[2]).toLowerCase().includes(s)).map(d=>`<div class="card"><div><span class="tag">${C[d[1]]}</span></div><b>${d[0]}</b><div>${d[2]}</div></div>`).join("");
+}
+
+let rv=false;
+function flash(){
+  if(i>=Q.length)return done();
+  const d=Q[i];
+  $("main").innerHTML=`<div class="mu">Card ${i+1} of ${Q.length}. Click card to flip.</div>
+  <div class="card fc" onclick="flip=!flip;flash()" tabindex="0">${flip!=rv?`<div>${d[2]}</div>`:`<div class="t">${d[0]}</div><div class="tag">${C[d[1]]}</div>`}</div>
+  <div class="row">
+    <button onclick="i=Math.max(0,i-1);flip=false;flash()">Back</button>
+    <button onclick="miss.add('${d[0].replace(/'/g,"\\'")}');bar();i++;flip=false;flash()">Still Learning</button>
+    <button onclick="miss.delete('${d[0].replace(/'/g,"\\'")}');bar();sc++;i++;flip=false;flash()">Mastered</button>
+    <button onclick="rv=!rv;flip=false;flash()">Flip side: ${rv?"definition first":"term first"}</button>
+  </div>`;
+}
+
+function quiz(){
+  if(i>=Q.length)return done();
+  const d=Q[i];
+  const o=sh([d,...sh(D.filter(x=>x!=d&&(x[1]==d[1]||Math.random()<.4))).slice(0,3)]);
+  $("main").innerHTML=`<div class="mu">Question ${i+1} of ${Q.length}</div>
+  <div class="card"><span class="tag">${C[d[1]]}</span><div>${d[2]}</div></div>
+  <div id="o">${o.map(x=>`<button class="opt" onclick="pick(this,${x==d})">${x[0]}</button>`).join("")}</div>
+  <div id="f"></div>`;
+}
+
+function pick(b,ok){
+  document.querySelectorAll(".opt").forEach(x=>x.disabled=true);
+  const d=Q[i];
+  b.classList.add(ok?"ok":"bad");
+  if(ok) sc++; else {
+    miss.add(d[0]);
+    document.querySelectorAll(".opt").forEach(x=>{if(x.textContent==d[0])x.classList.add("ok")});
+  }
+  $("f").innerHTML=`<div class="card"><b>${d[0]}:</b> ${d[2]}</div><button onclick="i++;quiz()">Next Question</button>`;
+}
+
+let M={t:[],d:[],s:null,left:0};
+function match(){
+  const r=Q.slice(i,i+6);
+  if(!r.length)return done();
+  M={t:sh(r),d:sh(r),s:null,left:r.length};
+  drawM();
+}
+
+function drawM(){
+  $("main").innerHTML=`<div class="mu">Match terms with definitions. ${M.left} remaining.</div>
+  <div class="grid">
+    <div>${M.t.map(x=>`<button class="opt ${M.s&&M.s.type=='t'&&M.s.val==x?'on':''}" onclick="selM('t', '${x[0].replace(/'/g,"\\'")}')">${x[0]}</button>`).join("")}</div>
+    <div>${M.d.map(x=>`<button class="opt ${M.s&&M.s.type=='d'&&M.s.val==x?'on':''}" onclick="selM('d', '${x[0].replace(/'/g,"\\'")}')">${x[2]}</button>`).join("")}</div>
+  </div>`;
+}
+
+function selM(type, valStr){
+  const obj = D.find(x=>x[0]===valStr);
+  if(!M.s){
+    M.s={type, val:obj};
+    drawM();
+  } else if(M.s.type===type){
+    M.s={type, val:obj};
+    drawM();
+  } else {
+    if(M.s.val[0]===obj[0]){
+      sc++;
+      M.t=M.t.filter(x=>x[0]!==obj[0]);
+      M.d=M.d.filter(x=>x[0]!==obj[0]);
+      M.left--;
+      M.s=null;
+      if(M.left===0) i+=6;
+      if(i>=Q.length) done(); else drawM();
+    } else {
+      miss.add(obj[0]);
+      bar();
+      alert("Incorrect match! Try again.");
+      M.s=null;
+      drawM();
+    }
+  }
+}
+
+function typ(){
+  if(i>=Q.length)return done();
+  const d=Q[i];
+  $("main").innerHTML=`<div class="mu">Term ${i+1} of ${Q.length}</div>
+  <div class="card"><span class="tag">${C[d[1]]}</span><div>${d[2]}</div></div>
+  <input type="text" id="ans" placeholder="Type the term here..." onkeydown="if(event.key==='Enter')chkT()">
+  <button onclick="chkT()">Submit</button>
+  <div id="f"></div>`;
+}
+
+function chkT(){
+  const input=$("ans").value.trim().toLowerCase();
+  const d=Q[i];
+  const target=d[0].toLowerCase();
+  if(input===target){
+    sc++;
+    $("f").innerHTML=`<div class="card ok">Correct! <b>${d[0]}</b></div><button onclick="i++;typ()">Next</button>`;
+  } else {
+    miss.add(d[0]);
+    bar();
+    $("f").innerHTML=`<div class="card bad">Incorrect. The correct term is: <b>${d[0]}</b></div><button onclick="i++;typ()">Next</button>`;
+  }
+}
+
+window.onload=go;
+</script>
+</body>
+</html>
