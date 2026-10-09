@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<title>NeuroMaster: AP Psychology Study Suite</title>
+<style>
+:root{--bg:#050f26;--p:#0b1f4a;--p2:#16408f;--ln:#1f4a9c;--ac:#4da3ff;--mu:#9fbdf0}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#e6eeff;min-height:100vh;background:radial-gradient(circle at 15% 10%,rgba(77,163,255,.14),transparent 40%),radial-gradient(circle at 85% 90%,rgba(40,100,230,.16),transparent 40%) fixed,var(--bg)}
+header{text-align:center;padding:48px 18px 20px}
+.logo{width:64px;height:64px;margin:0 auto 14px;border-radius:18px;background:rgba(77,163,255,.18);border:1px solid var(--ac);display:grid;place-items:center;color:var(--ac);font-size:30px;box-shadow:0 0 22px rgba(77,163,255,.4)}
+h1{font-weight:800;font-size:34px;margin:0}
+.mu{color:var(--mu);font-size:15px;margin-top:6px}
+main{max-width:1000px;margin:0 auto;padding:10px 18px 60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.unit{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;background:linear-gradient(160deg,rgba(22,64,143,.35),rgba(11,31,74,.9));border:1px solid var(--ln);border-radius:16px;padding:22px;min-height:190px;box-shadow:0 6px 24px rgba(0,0,0,.35);transition:transform .12s,border-color .12s}
+a.unit:hover{transform:translateY(-3px);border-color:var(--ac);box-shadow:0 0 24px rgba(77,163,255,.3)}
+.unit .n{font:500 12px 'JetBrains Mono',monospace;color:var(--ac);letter-spacing:.06em}
+.unit h2{margin:0;font-size:19px;font-weight:800}
+.unit p{margin:0;color:var(--mu);font-size:14px;line-height:1.45;flex:1}
+.go{font-weight:600;font-size:14px;color:var(--ac)}
+.unit.locked{opacity:.55;border-style:dashed;cursor:not-allowed}
+.unit.locked .go{color:var(--mu)}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><i class="fa-solid fa-brain"></i></div>
+  <h1>NeuroMaster</h1>
+  <div class="mu">AP Psychology Study Suite. Pick a unit to start.</div>
+</header>
+<main><div class="grid" id="grid"></div></main>
+
+<script>
+/* To release a unit: save its file (e.g. unit2.html) in this folder, then set ready:true below.
+   Also remove "disabled" from that unit's <option> in the dropdown inside the unit pages. */
+const UNITS=[
+  {n:0,file:"unit0.html",ready:true, title:"Foundations of Psych Science",desc:"Scientific thinking, research methods, experiments, statistics, and ethics."},
+  {n:1,file:"unit1.html",ready:true, title:"Biological Bases of Behavior",desc:"Genetics, neurons, neurotransmitters and hormones, drugs, and the brain."},
+  {n:2,file:"unit2.html",ready:false,title:"Cognition",desc:"Coming soon."},
+  {n:3,file:"unit3.html",ready:false,title:"Development & Learning",desc:"Coming soon."},
+  {n:4,file:"unit4.html",ready:false,title:"Social Psych & Personality",desc:"Coming soon."},
+  {n:5,file:"unit5.html",ready:false,title:"Mental & Physical Health",desc:"Coming soon."}
+];
+document.getElementById("grid").innerHTML=UNITS.map(u=>u.ready
+ ?`<a class="unit" href="${u.file}"><span class="n">UNIT ${u.n}</span><h2>${u.title}</h2><p>${u.desc}</p><span class="go">Open unit <i class="fa-solid fa-arrow-right"></i></span></a>`
+ :`<div class="unit locked" aria-disabled="true"><span class="n">UNIT ${u.n}</span><h2>${u.title}</h2><p>${u.desc}</p><span class="go"><i class="fa-solid fa-lock"></i> Locked</span></div>`).join("");
+</script>
+</body>
+</html>
